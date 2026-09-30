@@ -1,0 +1,175 @@
+/* CorpTrack Administrative Portal - Official NYSC Theme */
+
+:root {
+  --ct-primary: #008751;
+  --ct-primary-hover: #006b40;
+  --ct-primary-light: #e6f4ed;
+  --ct-secondary: #2c3e50;
+  --ct-bg: #f4f6f9;
+  --ct-card-bg: #ffffff;
+  --ct-text-dark: #1e293b;
+  --ct-text-muted: #64748b;
+  --ct-border: #e2e8f0;
+  
+  --ct-success: #10b981;
+  --ct-danger: #ef4444;
+  --ct-warning: #f59e0b;
+  --ct-info: #3b82f6;
+
+  --ct-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ct-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ct-radius: 8px;
+}
+
+body {
+  background-color: var(--ct-bg);
+  color: var(--ct-text-dark);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Official Portal Header Styling */
+.ct-navbar {
+  background-color: var(--ct-primary);
+  border-bottom: 3px solid #005c37;
+  color: white;
+}
+
+.ct-navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ct-badge-nysc {
+  background-color: #ffffff;
+  color: var(--ct-primary);
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Card UI & Tables */
+.card.ct-card {
+  border: 1px solid var(--ct-border);
+  border-radius: var(--ct-radius);
+  box-shadow: var(--ct-shadow-sm);
+  background-color: var(--ct-card-bg);
+  overflow: hidden;
+}
+
+.card-header.ct-card-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--ct-border);
+  font-weight: 600;
+  color: var(--ct-secondary);
+  padding: 1rem 1.25rem;
+}
+
+/* Nav Tabs styling fix */
+.nav-tabs .nav-link {
+  color: var(--ct-text-muted);
+  font-weight: 600;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.85rem 1.25rem;
+  background: transparent;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  color: var(--ct-primary);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--ct-primary) !important;
+  background-color: #ffffff !important;
+  border-bottom: 3px solid var(--ct-primary) !important;
+}
+
+.table.ct-table {
+  vertical-align: middle;
+  border-color: var(--ct-border);
+}
+
+.table.ct-table th {
+  background-color: #f8fafc;
+  color: var(--ct-text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Primary buttons */
+.btn-ct-primary {
+  background-color: var(--ct-primary);
+  border-color: var(--ct-primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-ct-primary:hover, .btn-ct-primary:focus {
+  background-color: var(--ct-primary-hover);
+  border-color: var(--ct-primary-hover);
+  color: white;
+}
+
+.btn-ct-outline {
+  border: 1px solid var(--ct-primary);
+  color: var(--ct-primary);
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.btn-ct-outline:hover {
+  background-color: var(--ct-primary-light);
+  color: var(--ct-primary-hover);
+}
+
+/* Status Badges */
+.badge-status-present {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.badge-status-absent {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.badge-status-clearance {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-status-holiday {
+  background-color: #e0f2fe;
+  color: #075985;
+  border: 1px solid #bae6fd;
+}
+
+/* Splash animation */
+@keyframes ct-zoom-pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.ct-splash-logo {
+  animation: ct-zoom-pulse 1.2s ease-in-out forwards;
+}
